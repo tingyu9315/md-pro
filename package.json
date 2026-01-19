@@ -1,0 +1,47 @@
+{
+  "name": "md-pro",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Chrome MV3 extension: convert blog articles to Markdown with images",
+  "author": "",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "postbuild": "node ./scripts/zip.mjs",
+    "zip": "vite build && node ./scripts/zip.mjs",
+    "icons": "node ./scripts/gen-icons.mjs",
+    "lint": "eslint \"src/**/*.{ts,tsx}\" --fix",
+    "format": "prettier --write .",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "chrome-extension",
+    "mv3",
+    "markdown",
+    "turndown",
+    "readability"
+  ],
+  "main": "index.js",
+  "devDependencies": {
+    "@crxjs/vite-plugin": "^2.2.0",
+    "@typescript-eslint/eslint-plugin": "^8.44.1",
+    "@typescript-eslint/parser": "^8.44.1",
+    "chrome-types": "^0.1.377",
+    "eslint": "^9.36.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-unused-imports": "^4.2.0",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.7",
+    "sharp": "^0.33.5"
+  },
+  "dependencies": {
+    "@mozilla/readability": "^0.6.0",
+    "dayjs": "^1.11.18",
+    "dompurify": "^3.2.7",
+    "jszip": "^3.10.1",
+    "turndown": "^7.2.1",
+    "turndown-plugin-gfm": "^1.0.2"
+  }
+}

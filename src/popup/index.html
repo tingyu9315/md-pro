@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MD Pro</title>
+    <style>
+      body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }
+      #app { padding: 12px; width: 280px; }
+      .btn { width: 100%; padding: 10px 12px; border-radius: 8px; border: 1px solid #e5e7eb; background: #111827; color: #fff; cursor: pointer; transition: all .15s ease; }
+      .btn:hover { background: #1f2937; }
+      .sub { margin-top: 8px; font-size: 12px; color: #6b7280; }
+      .row { margin-bottom: 10px; }
+      select { width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #e5e7eb; background: #fff; }
+      label { display:block; font-size: 12px; color:#374151; margin-bottom:4px; }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div class="row">
+        <label>导出策略</label>
+        <select id="strategy">
+          <option value="inline">内联图片（单个 .md）</option>
+          <option value="zip">ZIP（.md + assets/）</option>
+        </select>
+      </div>
+      <button id="export" class="btn">导出当前页面</button>
+      <div class="sub">快捷键：Command/Ctrl+Shift+Y · 详细设置见 Options</div>
+    </div>
+    <script type="module" src="./index.ts"></script>
+  </body>
+</html>

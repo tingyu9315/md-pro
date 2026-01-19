@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#eef2ff"/>
+      <stop offset="100%" stop-color="#e6fffb"/>
+    </linearGradient>
+    <linearGradient id="badge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#22d3ee"/>
+    </linearGradient>
+    <!-- removed inner blur; use crisp stroke -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+  <!-- Rounded card -->
+  <rect x="96" y="96" width="832" height="832" rx="200" ry="200" fill="url(#g)"/>
+  <rect x="96" y="96" width="832" height="832" rx="200" ry="200" fill="none" stroke="#ffffff" stroke-opacity="0.8" stroke-width="6"/>
+
+  <!-- MD monogram strong contrast (bluish purple, slightly thinner, improved spacing) -->
+  <g fill="none" stroke="#3b5cff" stroke-width="64" stroke-linecap="round" stroke-linejoin="round" opacity="0.98">
+    <path d="M270 688 V348 L384 548 L498 348 V688"/>
+    <path d="M580 352 H708 q128 0 128 160 q0 160 -128 160 H580 Z"/>
+  </g>
+
+  <!-- Badge with white base and colored arrow -->
+  <g filter="url(#shadow)">
+    <circle cx="824" cy="824" r="112" fill="#ffffff" fill-opacity="0.92"/>
+    <circle cx="824" cy="824" r="112" fill="none" stroke="url(#badge)" stroke-width="8"/>
+    <path d="M824 764 v96" stroke="url(#badge)" stroke-width="28" stroke-linecap="round"/>
+    <path d="M780 828 l44 44 l44 -44" fill="none" stroke="url(#badge)" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- micro highlights -->
+  <g transform="translate(220 232) rotate(-12)">
+    <circle cx="0" cy="0" r="5" fill="#94a3b8"/>
+    <circle cx="22" cy="-12" r="3.5" fill="#94a3b8" opacity="0.45"/>
+  </g>
+</svg>
+
