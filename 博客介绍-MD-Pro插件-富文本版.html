@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>MD Pro 插件介绍 - 富文本版</title>
+    <style>
+        body {
+            background-color: #f8fafc;
+            padding: 40px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            background-image: 
+                linear-gradient(rgba(168, 85, 247, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(168, 85, 247, 0.05) 1px, transparent 1px);
+            background-size: 20px 20px;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(168, 85, 247, 0.1);
+            padding: 40px;
+            color: #581c87;
+            border: 1px solid rgba(168, 85, 247, 0.1);
+        }
+        h1 {
+            color: #7e22ce;
+            font-size: 28px;
+            border-bottom: 2px solid #f3e8ff;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        h3 {
+            color: #9333ea;
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+        }
+        h3::before {
+            content: "✦";
+            margin-right: 10px;
+            font-size: 20px;
+        }
+        .tag-box {
+            background: #f3e8ff;
+            color: #7e22ce;
+            padding: 10px 20px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+        .highlight {
+            color: #c026d3;
+            font-weight: bold;
+        }
+        .list-item {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        .method-card {
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px dashed #d8b4fe;
+            border-radius: 16px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .tip {
+            background: #faf5ff;
+            border-left: 4px solid #a855f7;
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+        code {
+            background: #f3e8ff;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>拒绝手动搬砖！我撸了一个能把网页秒变 Markdown 的“神仙”插件</h1>
+        
+        <div class="tag-box">
+            <strong>标签：</strong> #Chrome扩展 #Markdown #前端开发 #TypeScript #生产力工具<br>
+            <strong>分类：</strong> 前端 / 开发工具
+        </div>
+
+        <h3>💡 痛点：为什么我需要它？</h3>
+        <p>作为一个“仓鼠症”晚期的技术博主，搬砖简直是噩梦：格式丢、图片裂、结构乱。既然没完美的，那就自己动手！于是，<span class="highlight">MD Pro</span> 诞生了。</p>
+
+        <h3>🚀 核心功能：你的网页“净化”专家</h3>
+        <div class="list-item">1. <strong>精准提取</strong>：集成 Readability 算法，只留正文，不留垃圾。</div>
+        <div class="list-item">2. <strong>拒绝图裂</strong>：支持 <span class="highlight">内联 Base64</span> 和 <span class="highlight">ZIP 打包</span> 两种方案，保命首选。</div>
+        <div class="list-item">3. <strong>链接清理</strong>：自动剔除讨厌的 <code>utm_</code> 追踪参数。</div>
+
+        <h3>🛠️ 技术栈</h3>
+        <p>采用最新的 <span class="highlight">Manifest V3</span> + <span class="highlight">TypeScript</span> + <span class="highlight">Vite</span>，追求极致的性能与安全。</p>
+
+        <h3>🎁 立即尝试</h3>
+        
+        <div class="method-card">
+            <h4 style="color: #7e22ce; margin-top: 0;">方法一：直接从 Chrome 商店安装</h4>
+            <p><strong>一键安装</strong>：<span style="text-decoration: underline; cursor: pointer;">[MD-Pro 插件地址]</span></p>
+            <p style="font-size: 13px; color: #a855f7;">✨ 如果对你有帮助欢迎好评！</p>
+        </div>
+
+        <div class="method-card">
+            <h4 style="color: #7e22ce; margin-top: 0;">方法二：GitHub 拉取本地安装</h4>
+            <p><strong>1. 获取代码</strong></p>
+            <ul style="list-style-type: none; padding-left: 0;">
+                <li class="list-item">⭐ <strong>GitHub</strong>: <span style="color: #9333ea;">github.com/Teernage/md-pro</span></li>
+                <li class="list-item">🚀 <strong>Gitee</strong>: <span style="color: #9333ea;">gitee.com/xuzhenxin11...</span></li>
+            </ul>
+            <p><strong>2. 安装步骤</strong></p>
+            <ol style="padding-left: 20px;">
+                <li class="list-item">打开 <code>chrome://extensions/</code></li>
+                <li class="list-item">开启“开发者模式”</li>
+                <li class="list-item">点击“加载已解压的扩展程序”并选择 <code>dist</code></li>
+            </ol>
+        </div>
+
+        <div class="tip">
+            <strong>小贴士：</strong> Side Panel 依赖较新版本 Chrome，建议使用 114+ 版本以获得最佳体验。
+        </div>
+
+        <p style="margin-top: 40px; text-align: center; font-weight: bold; color: #7e22ce;">
+            如果你觉得这个项目不错，欢迎点个 Star 交流！🌟
+        </p>
+    </div>
+</body>
+</html>
